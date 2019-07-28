@@ -1,0 +1,8 @@
+ErrorDocument 401 /?category=page&param=error401
+ErrorDocument 403 /?category=page&param=error403
+ErrorDocument 404 /?category=page&param=error404
+ErrorDocument 500 /?category=page&param=error500
+
+Options -Indexes -MultiViews -FollowSymLinks
+
+
