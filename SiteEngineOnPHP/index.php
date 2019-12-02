@@ -55,7 +55,7 @@
         # выбираем данные
         if (($db_result_array = SetData($db_result)) == false) error_header('Location: '.$sub_directory.'/?param=error404');
         # заменяем "$url_site" из текста на реальный URL_SITE
-        $url_index = str_replace('$url_file_site', URL_FILE_SITE, stripslashes($db_result_array['file_host']).stripslashes($db_result_array['file_dir']).stripslashes($db_result_array['file_name']));
+        $url_index = str_replace('$url_file_site', URL_FILE_SITE, stripslashes($db_result_array['file_host']).$sub_directory.'/'.stripslashes($db_result_array['file_dir']).'/'.stripslashes($db_result_array['file_name']));
         # увеличиваем счётчик
         mysqli_query($db_conn, "UPDATE files SET file_count = file_count+1 WHERE file_id = '$param'");
         # открывам файл
